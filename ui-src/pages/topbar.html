@@ -1,0 +1,31 @@
+<!-- ######################### top nav bar ############################################################# -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hiddennav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="brand-name"></a>
+        <a class="navbar-brand" id="brand-name-toggle"></a>
+      </div>
+      <div id="this-navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="#" id="menu-toggle">
+              <i class="material-icons md-14 md-light">chevron_left</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="hiddennav">
+        <ul class="nav navbar-nav navbar-right hiddennav">
+          <li><a ui-sref-active="active" ui-sref="index.getPlaylist">Home</a></li>
+          <li><a ui-sref-active="active" ui-sref="index.addPlaylist">Add Video</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- ######################### /#top nav bar ############################################################# -->

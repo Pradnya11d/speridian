@@ -1,0 +1,39 @@
+<!-- ######################### kitchen sink ############################################################### -->
+<div class="row">
+    <div class="col-sm-12 col-xs-12">
+        <h2 class="text-center"> Add Video to Playlist </h2>
+        <br>
+        <div class="panel panel-clean">
+          <div class="panel-body">
+            <div class="form-group">
+              <form class="create" name="createForm" novalidate>
+                <div class="panel panel-body">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                      <label><strong>Video Url :</strong></label>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                      <input type="text" class="form-control" name="video" id="video" placeholder="Video Url" ng-model="addvideo.video" required>
+                      <div ng-show="createForm.submitted || createForm.video.$touched" role="alert" >
+                        <span style="color:red" class="error" ng-show="createForm.video.$error.required">Please Provide Video Url</span>
+                      </div>
+                    </div>
+                  </div>  <!-- End of row -->
+                </form>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                  <button type="button" class="btn btn-warning" ng-click="back()">
+                    Cancel
+                  </button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                  <input type="submit" class="btn btn-success" name="Submit" value="Submit" ng-click="submit()" ng-disabled="!createForm.$valid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- ######################### /#kitchen sink ############################################################# -->

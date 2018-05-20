@@ -1,0 +1,33 @@
+{
+  "name": "video_player",
+  "description": "appliction for video player",
+  "main": "index.js",
+  "authors": [
+    "Pradnya Deshpande"
+  ],
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "angular": "1.5.8",
+    "material-design-icons": "^2.2.3",
+    "angular-route": "1.5.8",
+    "angular-ui-router": "0.3.2",
+    "angular-permission": "5.1.0",
+    "font-awesome": "~4.7.0",
+    "d3": "~3.4.13",
+    "underscore-min": "~1.8.3"
+  },
+  "dependencies": {
+    "angular": "^1.7.0"
+  }
+}

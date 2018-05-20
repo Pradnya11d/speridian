@@ -1,0 +1,206 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+/*
+ * Variables for sidebar
+ */
+@sidebar-width: 200px;
+@sidebar-toggled-width: 50px;
+@sidebar-background-color: #624E4D;
+@sidebar-text-color: #E4E0DD;//#999999;
+@sidebar-texthover-color: #fff;
+
+/*
+ * Standard list-group variables of bootstrap
+ */
+@list-group-bg: @sidebar-background-color;
+@list-group-border: @sidebar-background-color;
+@list-group-border-radius: 0px;
+@list-group-link-color: @sidebar-text-color;
+@list-group-link-heading-color: @sidebar-text-color;
+@list-group-link-hover-color: @sidebar-texthover-color;
+@list-group-hover-bg: rgba(75, 55, 43, 0.8);
+@list-group-active-bg: rgba(75, 55, 43, 0.8);
+
+// main wrapper for all body
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+// when sidebar toggle is clicked
+/* is this relevant - Seems not used */
+#wrapper.toggled {
+    padding-left: 0; /* orig value @sidebar-width;*/
+}
+
+//wrapper for side-bar
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: @sidebar-width;
+    width: 0;
+    height: 100%;
+    margin-left: -@sidebar-width;
+    overflow-y: auto;
+    background: @sidebar-background-color; /*#000;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+// when toggled
+/* is this relevant - Seems not used */
+#wrapper.toggled #sidebar-wrapper {
+    width: 0; /*orig value @sidebar-width;*/
+}
+
+//wrapper for content
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+/* is this relevant - Seems not used */
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -@sidebar-width;
+}
+
+//Sidebar navigation style
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: @sidebar-width;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+//sidebar navigation first element is brand. it's style
+.sidebar-nav > .sidebar-brand {
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    color: @sidebar-text-color;
+    background-color: rgba(75, 55, 43, 0.6);
+}
+.sidebar-nav .sidebar-brand a {
+    &.active,
+    &:hover,
+    &:focus {
+        background-color: rgba(75, 55, 43, 0.4);
+    }
+}
+//style for listgroup inside sidebar nav
+.sidebar-nav .list-group-item {
+    text-indent: 10px;
+    line-height: 50px; /*40px;*/
+    padding: 0px 0px;
+    border: 0px;    
+}
+
+//when toggled sidebar nav style
+.sidebar-toggle-nav {
+    position: absolute;
+    top: 0;
+    width: @sidebar-toggled-width;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+//sidebar toggled nav first element is brand. it's style
+.sidebar-toggle-nav > .sidebar-brand {
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    color: @sidebar-text-color;
+}
+//style for listgroup inside toggled sidebar nav
+.sidebar-toggle-nav .list-group-item {
+    text-indent: 10px;
+    line-height: 50px; /*40px;*/
+    padding: 0px 0px;
+    border: 0px;    
+}
+//sub menu in the sidebar nav
+.sidebar-subitem {
+    font-size: 12px;
+}
+//style for listgroup inside submenu in sidebar nav
+.sidebar-subitem .list-group-item {
+    text-indent: 30px;
+    line-height: 40px; /*40px;*/
+    padding: 0px 0px;
+    border: 0px;    
+}
+//submenu for sidebar nav style for anchor
+.sidebar-subitem a.list-group-item {
+    &.active,
+    &:hover,
+    &:focus {
+        background-color: rgba(75, 55, 43, 0.4);
+    }
+}
+//media query for all width > 768px
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: @sidebar-width;
+    }
+
+    #wrapper.toggled {
+        padding-left: @sidebar-toggled-width; /* this value was 0;*/
+    }
+
+    #sidebar-wrapper {
+        width: @sidebar-width;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: @sidebar-toggled-width; /* this value was 0;*/
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+
+    /* added by hsejar to hide*/
+    /*
+    #wrapper.toggled .sidebar-nav {
+        display: none;
+    }
+    */
+
+    #wrapper.toggled .sidebar-toggle-nav {
+        display: block;
+    }
+
+}
+
+/* added by hsejar*/
+// To put an icon on right side of any text
+.icon-right {
+    float: right;
+    align-content: center;
+    padding-right: 20px;
+//    background-color: rgba(75, 55, 43, 0.6);
+}
+.sidebar-toggle-nav .icon-right {
+    background-color: rgba(75, 55, 43, 0.6);   
+}

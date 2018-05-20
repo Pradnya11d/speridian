@@ -1,0 +1,49 @@
+<!-- ######################### kitchen sink ############################################################### -->
+<div class="row">
+    <div class="col-sm-12 col-xs-12">
+        <h2 class="text-center"> Video Player </h2>
+        <br>
+        <div class="panel panel-clean">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="row col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                          <iframe ng-model="video" id="video" width="420" height="315" ng-src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                          <div class="panel-body">
+                                <input class="btn btn-info" name="Add" value="Add" ng-click="add()">
+                                <br><br>
+                                <table class="table table-striped">
+                                      <tbody ng-repeat= "x in videoplaylist">
+                                          <tr>
+                                            <td><a ng-model="videosrc" ng-click="videolink(x.id)"> {{x.playlist}}</a></td>
+                                            <td><input class="btn btn-warning col-sm-6 col-xs-6 col-md-6 col-lg-6 text-right" name="Delete" value="Delete" ng-click="delete(x.id)">
+                                          </tr>
+                                      </tbody>
+                                </table>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="panel panel-clean">
+            <div class="panel-body">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="panel panel-body">
+                          <h4>Comments : </h4>
+                          <br>
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                              <input type="text" class="form-control" name="comment" id="comment" placeholder="Comment" ng-model="addvideo.comment">
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
+                                <input type="submit" class="btn btn-success" name="Submit" value="Submit" ng-click="submit()">
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+      </div>
+  </div>
+</div>
+<!-- ######################### /#kitchen sink ############################################################# -->

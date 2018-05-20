@@ -1,0 +1,131 @@
+/*
+ * Variables for sidebar
+ */
+@sidebar-background-color: #8f7270; //#bcaaa9; (70%)//#624E4D;(100%)
+
+// standard bootstrap navbar override
+@navbar-height: 50px;
+@navbar-margin-bottom: 0px;
+@navbar-inverse-bg: #FFF;
+@navbar-inverse-brand-color: #FFF;
+@navbar-inverse-brand-hover-bg: #ED6C44;
+@navbar-inverse-link-color: #3A1A19;//#BEA3A2;// #624E4D;
+@navbar-inverse-link-hover-color: #BEA3A2;//#624E4D;///#3B2726;
+@navbar-inverse-link-active-color: #BEA3A2;//#624E4D;//#3B2726;
+
+//@navbar-inverse-toggle-icon-bar-bg: #3A1A19;
+//@navbar-inverse-toggle-hover-bg: #BEA3A2;
+
+.navbar-brand{
+    width: 200px;
+    background-color: #ED6C44;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled .navbar-brand{
+    width: 50px;
+    font-size: 14px;
+}
+
+#brand-name-toggle{
+    display: none;
+}
+#wrapper.toggled #brand-name-toggle{
+    display: block;
+}
+#wrapper.toggled #brand-name{
+    display: none;
+}
+
+.navbar {
+    border: 0px;
+}
+.navbar-toggle {
+    border: 0px;
+}
+
+//wrapper for top-bar
+#topbar-wrapper {
+    z-index: 1000;
+    position: relative;
+    top: 50px;
+    height: 50px;
+    width: 100%;
+    margin-top: -50px;
+    overflow: hidden;
+    background: @sidebar-background-color; /*#000;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*
+.navbar-style {
+	background-color: #49372B; //#000000;
+}
+
+.navbar-element {
+	float: right;
+	padding: 5px;
+}
+
+.nav li a {
+	color: #fff;
+}
+*/
+
+.hiddennav {
+  display: none;
+}
+
+// landscape tabs min-width:768px & max-width:979px
+@media (min-width:768px) and (max-width:979px){
+    .navbar-brand{
+        width: 50px;
+        font-size: 14px;
+    }
+    #brand-name{
+        display: none;
+    }
+    #brand-name-toggle{
+        display: block;
+    }
+    #menu-toggle{
+        display: none;
+    }
+}
+// mobile and potrait tablets max-width:768px
+@media(max-width:767px) {
+    .navbar-inverse{
+        background-color: @navbar-inverse-link-color;
+    }
+    .navbar-brand{
+        width: 50px;
+        font-size: 14px;
+    }
+    #brand-name{
+        display: none;
+    }
+    #brand-name-toggle{
+        display: block;
+    }
+
+    .navbar-inverse .navbar-nav > li > a{
+        color: #E4E0DD;
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+     }
+    #menu-toggle{
+        display: none;
+    }
+    .hiddennav {
+      display: inherit;
+    }
+}

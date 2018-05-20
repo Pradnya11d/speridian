@@ -1,0 +1,46 @@
+{
+  "name": "video_player",
+  "version": "0.0.1",
+  "description": "appliction for video player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pradnya Deshpande",
+  "license": "",
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean": "~0.3.2",
+    "gulp-clean-css": "~2.0.12",
+    "gulp-concat": "~2.6.0",
+    "gulp-connect": "~5.0.0",
+    "gulp-inject": "~4.1.0",
+    "gulp-less": "~3.1.0",
+    "gulp-notify": "~2.2.0",
+    "run-sequence": "~1.2.2"
+  },
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "~1.1.3",
+    "async": "~2.1.2",
+    "body-parser": "~1.15.1",
+    "express": "~4.14.0",
+    "jsonwebtoken": "~7.2.1",
+    "morgan": "^1.7.0",
+    "mqtt": "~2.2.0",
+    "mysql": "~2.11.1",
+    "n3-charts": "~2.0.28",
+    "nodejs-websocket": "~1.7.1",
+    "nonce": "~1.0.4",
+    "passport": "~0.3.2",
+    "passport-http-bearer": "~1.0.1",
+    "redis": "~2.6.3",
+    "request": "~2.79.0",
+    "require": "^2.4.20",
+    "underscore": "~1.8.3",
+    "uuid": "~3.0.1",
+    "video.js": "^7.0.2",
+    "winston": "2.3.0",
+    "winston-daily-rotate-file": "1.4.0"
+  }
+}
